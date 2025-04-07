@@ -1,0 +1,141 @@
+/* Button styles */
+button {
+  display: flex;
+  width: 100%;
+  padding: 14px;
+  background-color: #60a5fa;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: all 0.3s ease, background-color 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+button:hover {
+  background-color: #3b82f6;
+  transform: translateY(-1px);
+}
+
+button.loading {
+  position: relative;
+}
+
+button.loading .button-text {
+  visibility: hidden;
+}
+
+button.loading .loading-spinner {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Loading spinner */
+.loading-spinner {
+  display: none;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #ffffff3d;
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Copy button styles */
+.copy-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 6px 12px;
+  background-color: #334155;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: all 0.2s ease, background-color 0.3s ease;
+  opacity: 0.8;
+}
+
+.copy-button:hover {
+  opacity: 1;
+  background-color: #475569;
+  transform: translateY(0);
+}
+
+.copy-button.copied {
+  background-color: #22c55e;
+}
+
+/* Run code button styles */
+.run-code-button {
+  display: block;
+  width: auto;
+  margin: 10px auto 0;
+  padding: 6px 12px;
+  background-color: #334155;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: all 0.2s ease, background-color 0.3s ease;
+  opacity: 0.8;
+}
+
+.run-code-button:hover {
+  opacity: 1;
+  background-color: #475569;
+}
+
+/* Button colors per mode */
+button.explainer-mode {
+  background-color: #54d179;
+}
+
+button.explainer-mode:hover {
+  background-color: #3bb061;
+}
+
+button.reviewer-mode {
+  background-color: #e254e2;
+}
+
+button.reviewer-mode:hover {
+  background-color: #c23bc2;
+}
+
+button.commenter-mode {
+  background-color: #e25454;
+}
+
+button.commenter-mode:hover {
+  background-color: #c23b3b;
+}
+
+button.converter-mode {
+  background-color: #e2a254;
+}
+
+button.converter-mode:hover {
+  background-color: #c28b3b;
+}
+
+button.optimizer-mode {
+  background-color: #5487e2;
+}
+
+button.optimizer-mode:hover {
+  background-color: #3b6ac2;
+}
