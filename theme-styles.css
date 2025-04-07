@@ -1,0 +1,211 @@
+/* Theme Switcher Styles */
+.theme-switcher {  
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  background: var(--background-secondary);
+}
+
+.theme-options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.theme-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background: var(--background-accent);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-option:hover {
+  transform: translateY(-2px);
+}
+
+.theme-option.active {
+  border-color: var(--primary-main);
+}
+
+.theme-preview {
+  width: 60px;
+  height: 30px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.theme-preview > div {
+  height: 100%;
+}
+
+.theme-option span {
+  font-size: 0.8em;
+  color: var(--primary-text);
+}
+
+/* Add new floating theme switcher styles */
+.theme-switcher-floating {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--background-secondary);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.theme-options-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.theme-options-vertical .theme-option {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  width: 100%;
+  min-width: 120px;
+  background: var(--background-accent);
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-options-vertical .theme-option:hover {
+  transform: translateX(5px);
+}
+
+.theme-options-vertical .theme-option.active {
+  border-color: var(--primary-main);
+}
+
+.theme-options-vertical .theme-preview {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.theme-options-vertical .theme-option span {
+  font-size: 0.8em;
+  color: var(--primary-text);
+}
+
+/* Theme Variables */
+:root {
+  /* Default theme variables will be overridden by theme-manager.js */
+  --primary-main: #3b82f6;
+  --primary-hover: #2563eb;
+  --primary-text: #f8fafc;
+  --background-main: #0f172a;
+  --background-secondary: #1e293b;
+  --background-accent: #334155;
+  --accent-success: #22c55e;
+  --accent-warning: #eab308;
+  --accent-error: #ef4444;
+}
+
+/* Apply theme variables to existing elements */
+body {
+  background-color: var(--background-main);
+  color: var(--primary-text);
+}
+
+.container {
+  background-color: var(--background-secondary);
+}
+
+button {
+  background-color: var(--primary-main);
+  color: var(--primary-text);
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+select, textarea, .custom-language-input input {
+  background-color: var(--background-main);
+  border-color: var(--background-accent);
+  color: var(--primary-text);
+}
+
+select:focus, textarea:focus, .custom-language-input input:focus {
+  border-color: var(--primary-main);
+  box-shadow: 0 0 0 2px rgba(var(--primary-main), 0.2);
+}
+
+.mode-switch {
+  background-color: var(--background-accent);
+  border-color: var(--background-accent);
+}
+
+.output {
+  background-color: var(--background-main);
+  border-color: var(--background-accent);
+}
+
+.score.high {
+  color: var(--accent-success);
+}
+
+.score.medium {
+  color: var(--accent-warning);
+}
+
+.score.low {
+  color: var(--accent-error);
+}
+
+@media (max-width: 480px) {
+  .theme-options {
+    gap: 5px;
+  }
+  
+  .theme-option {
+    padding: 8px;
+  }
+  
+  .theme-preview {
+    width: 45px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .theme-switcher-floating {
+    left: 10px;
+    transform: translateY(-50%) scale(0.9);
+  }
+  
+  .theme-options-vertical .theme-option {
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-switcher-floating {
+    left: 5px;
+    transform: translateY(-50%) scale(0.8);
+  }
+  
+  .theme-options-vertical .theme-option span {
+    font-size: 0.7em;
+  }
+}
