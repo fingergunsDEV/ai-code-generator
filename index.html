@@ -1,0 +1,173 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Code Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="title-section">
+      <p class="subtitle">Advanced</p>
+      <h1><span id="titleText">AI Code Generator</span></h1>
+    </div>
+    
+    <div class="checkbox-group mode-switch">
+      <select id="modeOptions">
+        <!-- Options will be populated dynamically -->
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label for="language">Programming Language/Software:</label>
+      <select id="language">
+        <option value="javascript">JavaScript</option>
+        <option value="css">CSS</option>
+        <option value="html">HTML</option>
+        <option value="html_css_javascript_all_in_one_file">HTML + CSS + Javascript (All in one file)</option>
+        <option value="python">Python</option>
+        <option value="java">Java</option>
+        <option value="cpp">C++</option>
+        <option value="csharp">C#</option>
+        <option value="php">PHP</option>
+        <option value="ruby">Ruby</option>
+        <option value="swift">Swift</option>
+        <option value="kotlin">Kotlin</option>
+        <option value="rust">Rust</option>
+        <option value="go">Go</option>
+        <option value="typescript">TypeScript</option>
+        <option value="sql">SQL</option>
+        <option value="lua">Lua</option>
+        <option value="custom">+ Add Custom Language</option>
+      </select>
+      <div id="customLanguageInput" class="custom-language-input hidden">
+        <input type="text" id="customLanguage" placeholder="Enter custom language name">
+      </div>
+    </div>
+
+    <div data-mode-option="useTemplate" class="checkbox-group hidden">
+      <input type="checkbox" id="useTemplate">
+      <label for="useTemplate">Use template</label>
+      
+      <div id="templateOptions" class="hidden">
+        <div class="input-group">
+          <label for="templatePlatform">Platform:</label>
+          <select id="templatePlatform">
+            <option value="desktop">Desktop</option>
+            <option value="mobile">Mobile</option>
+          </select>
+        </div>
+        
+        <div class="input-group">
+          <label for="templateType">Template Type:</label>
+          <select id="templateType">
+            <option value="basic">Basic</option>
+            <option value="spa">Single Page App</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-group">
+      <label id="descriptionLabel" for="description">Description of Code to Generate/Modify:</label>
+      <textarea id="description" placeholder="Describe what you want the code to do..."></textarea>
+    </div>
+
+    <!-- Mode-specific options -->
+    <div id="modeOptionsContainer">
+      <div data-mode-option="tone" class="input-group hidden">
+        <label for="tone">Select Tone:</label>
+        <select id="tone">
+          <option value="professional">Default (Professional)</option>
+          <option value="helpful">Helpful</option>
+          <option value="direct">Direct</option>
+          <option value="formal">Formal</option>
+          <option value="technical">Technical</option>
+          <option value="custom">+ Custom Tone</option>
+        </select>
+        <div id="customToneInput" class="custom-language-input hidden">
+          <input type="text" id="customTone" placeholder="Enter custom tone">
+        </div>
+      </div>
+
+      <div data-mode-option="mode" class="input-group hidden">
+        <label for="mode">Generator Mode:</label>
+        <select id="mode">
+          <option value="single">Generate Code</option>
+          <option value="multiple">Generate 3 Distinct Codes</option>
+          <option value="fullyimplemented">Generate Code (No example implementations, not lazy)</option>
+          <option value="shortest">Generate Code (Shortest possible)</option>
+          <option value="complete">Generate Code (Nothing omitted, recommended for copy-pasting)</option>
+        </select>
+      </div>
+
+      <div data-mode-option="targetLanguage" class="input-group hidden">
+        <label for="targetLanguage">Target Language:</label>
+        <select id="targetLanguage">
+          <option value="javascript">JavaScript</option>
+          <option value="css">CSS</option>
+          <option value="html">HTML</option>
+          <option value="html_css_javascript_all_in_one_file">HTML + CSS + Javascript (All in one file)</option>
+          <option value="python">Python</option>
+          <option value="java">Java</option>
+          <option value="cpp">C++</option>
+          <option value="csharp">C#</option>
+          <option value="php">PHP</option>
+          <option value="ruby">Ruby</option>
+          <option value="swift">Swift</option>
+          <option value="kotlin">Kotlin</option>
+          <option value="rust">Rust</option>
+          <option value="go">Go</option>
+          <option value="typescript">TypeScript</option>
+          <option value="sql">SQL</option>
+          <option value="lua">Lua</option>
+        </select>
+      </div>
+
+      <div data-mode-option="includeExplanation" class="checkbox-group hidden">
+        <input type="checkbox" id="includeExplanation">
+        <label for="includeExplanation">Include explanation with generated code</label>
+      </div>
+
+      <div data-mode-option="commentMode" class="input-group hidden">
+        <label for="commentMode">Comment Mode:</label>
+        <select id="commentMode">
+          <option value="everywhere">Add comments everywhere</option>
+          <option value="necessary">Add comments where necessary</option>
+          <option value="definitions">Add comments at definition of classes/methods</option>
+        </select>
+      </div>
+
+      <div data-mode-option="commentSpecificity" class="input-group hidden">
+        <label for="commentSpecificity">Comment Specificity:</label>
+        <select id="commentSpecificity">
+          <option value="concise">Concise</option>
+          <option value="brief">Brief</option>
+          <option value="somewhat">Somewhat specific</option>
+          <option value="very">Very Specific</option>
+        </select>
+      </div>
+
+      <div data-mode-option="optimizerMode" class="input-group hidden">
+        <label for="optimizerMode">Optimization Mode:</label>
+        <select id="optimizerMode">
+          <option value="optimize">Optimize Code</option>
+          <option value="readability">Optimize Code and Improve readability</option>
+          <option value="comprehensive">Optimize all lines of code</option>
+        </select>
+      </div>
+    </div>
+
+    <button id="execute">
+      <span class="button-text">Execute</span>
+      <div class="loading-spinner"></div>
+    </button>
+
+    <div id="output" class="output">
+      <!-- Code output will be displayed here -->
+    </div>
+  </div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
