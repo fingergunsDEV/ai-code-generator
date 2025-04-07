@@ -1,8 +1,8 @@
 /* Base styles for fundamental elements */
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #0f172a;
-  color: #fff;
+  background-color: #FFFFFF;
+  color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +13,7 @@ body {
 }
 
 .hljs {
-  background: #0f172a;
+  background: #F2f2f2;
   padding: 0;
 }
 
