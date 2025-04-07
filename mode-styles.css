@@ -1,0 +1,210 @@
+/* Mode-specific color styles */
+/* Subtitle colors per mode */
+.subtitle.explainer-mode {
+  color: #54d179;
+}
+
+.subtitle.reviewer-mode {
+  color: #e254e2;
+}
+
+.subtitle.commenter-mode {
+  color: #e25454;
+}
+
+.subtitle.converter-mode {
+  color: #e2a254;
+}
+
+.subtitle.optimizer-mode {
+  color: #5487e2;
+}
+
+/* Label colors per mode */
+label.explainer-mode {
+  color: #a7e9bd;
+}
+
+label.reviewer-mode {
+  color: #e9a7e9;
+}
+
+label.commenter-mode {
+  color: #e9a7a7;
+}
+
+label.converter-mode {
+  color: #e9bda7;
+}
+
+label.optimizer-mode {
+  color: #a7bde9;
+}
+
+/* Form elements colors per mode */
+select.explainer-mode, textarea.explainer-mode,
+.custom-language-input input.explainer-mode {
+  background-color: #0a1a10;
+  border-color: #2e4f3b;
+}
+
+select.reviewer-mode, textarea.reviewer-mode,
+.custom-language-input input.reviewer-mode {
+  background-color: #1a0f1a;
+  border-color: #4f2e4f;
+}
+
+select.commenter-mode, textarea.commenter-mode,
+.custom-language-input input.commenter-mode {
+  background-color: #1a0f0f;
+  border-color: #4f2e2e;
+}
+
+select.converter-mode, textarea.converter-mode,
+.custom-language-input input.converter-mode {
+  background-color: #1a0f0a;
+  border-color: #4f2e2e;
+}
+
+select.optimizer-mode, textarea.optimizer-mode,
+.custom-language-input input.optimizer-mode {
+  background-color: #0a0f1a;
+  border-color: #2e3b4f;
+}
+
+/* Mode-specific focus states */
+select.explainer-mode:focus, textarea.explainer-mode:focus,
+.custom-language-input input.explainer-mode:focus {
+  border-color: #54d179;
+  box-shadow: 0 0 0 2px rgba(84, 209, 121, 0.2);
+}
+
+select.reviewer-mode:focus, textarea.reviewer-mode:focus,
+.custom-language-input input.reviewer-mode:focus {
+  border-color: #e254e2;
+  box-shadow: 0 0 0 2px rgba(226, 84, 226, 0.2);
+}
+
+select.commenter-mode:focus, textarea.commenter-mode:focus,
+.custom-language-input input.commenter-mode:focus {
+  border-color: #e25454;
+  box-shadow: 0 0 0 2px rgba(226, 84, 84, 0.2);
+}
+
+select.converter-mode:focus, textarea.converter-mode:focus,
+.custom-language-input input.converter-mode:focus {
+  border-color: #e2a254;
+  box-shadow: 0 0 0 2px rgba(226, 162, 84, 0.2);
+}
+
+select.optimizer-mode:focus, textarea.optimizer-mode:focus,
+.custom-language-input input.optimizer-mode:focus {
+  border-color: #5487e2;
+  box-shadow: 0 0 0 2px rgba(84, 135, 226, 0.2);
+}
+
+/* Mode-specific checkbox colors */
+.checkbox-group input[type="checkbox"].explainer-mode {
+  accent-color: #54d179;
+}
+
+.checkbox-group input[type="checkbox"].reviewer-mode {
+  accent-color: #e254e2;
+}
+
+/* Mode-specific mode switch styles */
+.mode-switch.explainer-mode {
+  background-color: #152f20;
+  border-color: #2e4f3b;
+}
+
+.mode-switch.reviewer-mode {
+  background-color: #2f152f;
+  border-color: #4f2e4f;
+}
+
+.mode-switch.commenter-mode {
+  background-color: #2f1515;
+  border-color: #4f2e2e;
+}
+
+.mode-switch.converter-mode {
+  background-color: #2f1515;
+  border-color: #4f2e2e;
+}
+
+.mode-switch.optimizer-mode {
+  background-color: #15202f;
+  border-color: #2e3b4f;
+}
+
+.mode-switch label.explainer-mode {
+  color: #a7e9bd;
+}
+
+.mode-switch label.reviewer-mode {
+  color: #e9a7e9;
+}
+
+.mode-switch label.commenter-mode {
+  color: #e9a7a7;
+}
+
+.mode-switch label.converter-mode {
+  color: #e9bda7;
+}
+
+.mode-switch label.optimizer-mode {
+  color: #a7bde9;
+}
+
+/* Mode-specific output styles */
+.output.explainer-mode {
+  background-color: #0a1a10;
+  border-color: #2e4f3b;
+}
+
+.output.reviewer-mode {
+  background-color: #1a0f1a;
+  border-color: #4f2e4f;
+}
+
+.output.commenter-mode {
+  background-color: #1a0f0f;
+  border-color: #4f2e2e;
+}
+
+.output.converter-mode {
+  background-color: #1a0f0a;
+  border-color: #4f2e2e;
+}
+
+.output.optimizer-mode {
+  background-color: #0a0f1a;
+  border-color: #2e3b4f;
+}
+
+/* Output heading colors per mode */
+.output.explainer-mode h2, .output.explainer-mode h3 {
+  color: #54d179;
+}
+
+.output.reviewer-mode h2, .output.reviewer-mode h3 {
+  color: #e254e2;
+}
+
+.output.commenter-mode h2, .output.commenter-mode h3 {
+  color: #e25454;
+}
+
+.output.converter-mode h2, .output.converter-mode h3 {
+  color: #e2a254;
+}
+
+.output.optimizer-mode h2, .output.optimizer-mode h3 {
+  color: #5487e2;
+}
+
+body.optimizer-mode {
+  background-color: #0a0f1a;
+}
