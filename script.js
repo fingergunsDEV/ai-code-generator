@@ -3,6 +3,7 @@ import { setupCustomLanguageHandlers } from './language-handlers.js';
 import { handleModeChange } from './mode-handler.js';  
 import { getUIElements } from './ui-elements.js';  
 import { initThemeManager } from './theme-manager.js';
+import WebsimSocket from './websim-socket.js'; // Import WebsimSocket
 
 document.addEventListener('DOMContentLoaded', async () => {
   const room = new WebsimSocket();
