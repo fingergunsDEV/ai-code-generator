@@ -1,0 +1,11 @@
+/* Media queries for responsive design */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+}
+
