@@ -1,0 +1,65 @@
+/* Output container styles */
+.output {
+  position: relative;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  background-color: #0f172a;
+  color: #fff;
+  line-height: 1.5;
+  overflow-x: auto;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.output pre {
+  margin-top: 30px;
+  font-family: 'Fira Code', monospace;
+  white-space: pre-wrap;
+  margin: 0;
+}
+
+.output:not(:has(pre)) {
+  white-space: normal;
+  font-family: 'Inter', sans-serif;
+}
+
+.output ul, .output ol {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.output h2, .output h3 {
+  margin: 15px 0 10px 0;
+  color: #60a5fa;
+  transition: color 0.3s ease;
+}
+
+.output p {
+  margin: 10px 0;
+}
+
+/* Review score styles */
+.score {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.score.high {
+  color: #22c55e;
+  background-color: rgba(34, 197, 94, 0.1);
+}
+
+.score.medium {
+  color: #eab308;
+  background-color: rgba(234, 179, 8, 0.1);
+}
+
+.score.low {
+  color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.1);
+}
