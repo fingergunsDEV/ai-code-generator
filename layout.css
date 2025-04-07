@@ -1,0 +1,75 @@
+/* Layout-related styles */
+.container {
+  background-color: #1e293b;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 700px;
+  transition: background-color 0.3s ease;
+}
+
+.title-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.subtitle {
+  color: #60a5fa;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin: 0;
+  font-size: 0.9em;
+  transition: color 0.3s ease;
+}
+
+h1 {
+  margin: 10px 0;
+  color: #f8fafc;
+  font-size: 2.5em;
+  font-weight: 800;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 8px;
+}
+
+.mode-switch {
+  margin: 0 0 20px;
+  padding: 10px;
+  background-color: #1e293b;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Mode-specific container styles */
+.container.explainer-mode {
+  background-color: #152f20;
+}
+
+.container.reviewer-mode {
+  background-color: #2f152f;
+}
+
+.container.commenter-mode {
+  background-color: #2f1515;
+  border-color: #4f2e2e;
+}
+
+.container.converter-mode {
+  background-color: #2f1515;
+  border-color: #4f2e2e;
+}
+
+.container.optimizer-mode {
+  background-color: #15202f;
+}
