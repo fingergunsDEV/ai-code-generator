@@ -15,4 +15,20 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Default to generator mode on page load
   await setTimeout(() => handleModeChange({target:{value: "generator"}}, elements), 250);
 });
+class WebsimSocket {
+    constructor() {
+        // Initialize WebsimSocket properties and methods
+    }
+}
 
+document.addEventListener('DOMContentLoaded', async () => {
+  const room = new WebsimSocket();
+  const elements = getUIElements();  
+  
+  await setupUIHandlers(room);
+  await setupCustomLanguageHandlers(room);
+  initThemeManager();
+
+  // Default to generator mode on page load
+  await setTimeout(() => handleModeChange({target:{value: "generator"}}, elements), 250);
+});
