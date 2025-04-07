@@ -1,0 +1,126 @@
+/* Form element styles */
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #cbd5e1;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  background-color: #0f172a;
+  color: #fff;
+  box-sizing: border-box;
+  transition: all 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+select:focus, textarea:focus {
+  border-color: #60a5fa;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #60a5fa;
+  transition: accent-color 0.3s ease;
+}
+
+/* Custom language input styles */
+.custom-language-input {
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.custom-language-input.hidden {
+  display: none;
+}
+
+.custom-language-input input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  background-color: #0f172a;
+  color: #fff;
+  box-sizing: border-box;
+  transition: all 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.custom-language-input input:focus {
+  border-color: #60a5fa;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+}
+
+/* Mode option visibility toggles */
+[data-mode-option] {
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  max-height: 500px;
+  overflow: hidden;
+  opacity: 1;
+}
+
+[data-mode-option].hidden {
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+#generatorOptions {
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  max-height: 500px;
+  overflow: hidden;
+  opacity: 1;
+}
+
+#generatorOptions.hidden {
+  max-height: 0;
+  opacity: 0;
+}
+
+#commenterOptions {
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  max-height: 500px;
+  overflow: hidden;
+  opacity: 1;
+}
+
+#commenterOptions.hidden {
+  max-height: 0;
+  opacity: 0;
+}
+
+/* Add template options styles */
+#templateOptions {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+#templateOptions.hidden {
+  display: none;
+}
+
+#templateOptions .input-group {
+  margin-bottom: 1rem;
+}
+
+#templateOptions .input-group:last-child {
+  margin-bottom: 0;
+}
